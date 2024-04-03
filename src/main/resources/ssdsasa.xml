@@ -1,0 +1,22 @@
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:mem:test</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"/>
+
+
+
+        <!-- NONE CREATE CREATE-DROP UPDATE VALIDATE -->
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="show_sql">true</property>
+        <!-- List of XML mapping files -->
+        <!--        <mapping package="ru.gb.lesson4"/>-->
+        <mapping class="org.example.Main"/>
+    </session-factory>
+</hibernate-configuration>
